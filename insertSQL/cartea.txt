@@ -1,0 +1,6 @@
+INSERT INTO `cartea`(`isbn`, `titlu`, `editura`, `nr_exemplare`, `categorie`) VALUES ('1','Ion','Libris','2','psihologic');
+INSERT INTO `cartea`(`isbn`, `titlu`, `editura`, `nr_exemplare`, `categorie`) VALUES ('2','Morometii','Humanitas','3','social');
+INSERT INTO `cartea`(`isbn`, `titlu`, `editura`, `nr_exemplare`, `categorie`) VALUES ('3','Iarna pe ulita','Humanitas','3','poezie');
+INSERT INTO `cartea`(`isbn`, `titlu`, `editura`, `nr_exemplare`, `categorie`) VALUES ('4','Amintiri din copilarie','Epica','2','memorialistic');
+INSERT INTO `cartea`(`isbn`, `titlu`, `editura`, `nr_exemplare`, `categorie`) VALUES ('5','Povestea Mea','Epica','3','jurnal');
+INSERT INTO `cartea`(`isbn`, `titlu`, `editura`, `nr_exemplare`, `categorie`) VALUES ('6','Pamantul Fagaduintei','Libris','2','drama');

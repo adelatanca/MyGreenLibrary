@@ -1,0 +1,13 @@
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('1','1','1');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('2','0','1');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('3','0','2');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('4','0','2');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('5','1','2');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('6','1','3');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('7','1','3');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('8','0','3');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('9','1','5');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('10','1','5');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('11','0','5');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('12','1','6');
+INSERT INTO `status_cartea`(`nr_carte`, `disponibilitate`, `cartea_isbn`) VALUES ('13','0','6');

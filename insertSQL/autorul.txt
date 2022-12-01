@@ -1,0 +1,6 @@
+INSERT INTO `autorul`(`id_autor`, `nume_autor`, `prenume_autor`, `gen`) VALUES ('1','Cosbuc','George','poezie');
+INSERT INTO `autorul`(`id_autor`, `nume_autor`, `prenume_autor`, `gen`) VALUES ('2','Creanga','Ion','povesti');
+INSERT INTO `autorul`(`id_autor`, `nume_autor`, `prenume_autor`, `gen`) VALUES ('3','Preda','Mihai','realism');
+INSERT INTO `autorul`(`id_autor`, `nume_autor`, `prenume_autor`, `gen`) VALUES ('4','Rebreanu','Liviu','novelist');
+INSERT INTO `autorul`(`id_autor`, `nume_autor`, `prenume_autor`, `gen`) VALUES ('5','Obama','Michelle','jurnal');
+INSERT INTO `autorul`(`id_autor`, `nume_autor`, `prenume_autor`, `gen`) VALUES ('6','Obama','Barack','drama');

@@ -1,0 +1,4 @@
+INSERT INTO `carte_autor`(`id`, `cartea_isbn`, `autorul_id_autor`) VALUES ('1','1','4');
+INSERT INTO `carte_autor`(`id`, `cartea_isbn`, `autorul_id_autor`) VALUES ('2','2','3');
+INSERT INTO `carte_autor`(`id`, `cartea_isbn`, `autorul_id_autor`) VALUES ('3','3','1');
+INSERT INTO `carte_autor`(`id`, `cartea_isbn`, `autorul_id_autor`) VALUES ('4','4','2'); 
