@@ -46,7 +46,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <main >
  
     <div class="container text-center">
-        <h1 class="py-4 bg-success text-light rounded"><i class="fas fa-book"></i> <a href="http://localhost:81/BibliotecaTancaAdela/library.php"> My Green Library<a></h1>
+        <h1 class="py-4 bg-success text-light rounded"><i class="fas fa-book"></i> <a href="http://localhost:8081/BibliotecaTancaAdela/library.php"> My Green Library<a></h1>
 
         <nav class="navbar sticky-top navbar-expand-lg bg-white navbar-light shadow-sm  " >
     <div class="container">
@@ -62,27 +62,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/library.php">Acasa </i></a>
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/library.php">Acasa </i></a>
           </li>
          
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/login.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/login.php">
               Login
             </a>
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/register.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/register.php">
               User Sign-up
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/logout.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/logout.php">
               Logout
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/reset_password.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/reset_password.php">
               Reseteaza parola
             </a>
           </li>
@@ -91,30 +91,30 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           {
             ?>
            <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://localhost:81/BibliotecaTancaAdela/indexCarte.php"  data-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://localhost:8081/BibliotecaTancaAdela/indexCarte.php"  data-toggle="dropdown">
                             Carti
                             </a>
                             <ul class="dropdown-menu">
-                            <li class="nav-item"> <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/indexCarte.php">Carti</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/indexStatusCartea.php">Status_Cartea</a></li>
-                                <li class="nav-item"><a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/indexCarteAutor.php">Carte_Autor</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/indexCarte.php">Carti</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/indexStatusCartea.php">Status_Cartea</a></li>
+                                <li class="nav-item"><a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/indexCarteAutor.php">Carte_Autor</a></li>
                             </ul>
                         </li>
         
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/indexAutor.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/indexAutor.php">
               Autori
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/indexImprumut.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/indexImprumut.php">
               Imprumuturi
             </a>
           </li>
         
 
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/indexCititori.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/indexCititori.php">
             Cititori
             </a>
           </li>
@@ -128,8 +128,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             </a>
                             <ul class="dropdown-menu">
                
-                                <li class="nav-item">   <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/indexUser.php">Fisa bibliotecii</a></li>
-                                <li class="nav-item"><a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/indexAlegeCarte.php">Biblioteca</a></li>
+                                <li class="nav-item">   <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/indexUser.php">Fisa bibliotecii</a></li>
+                                <li class="nav-item"><a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/indexAlegeCarte.php">Biblioteca</a></li>
                             </ul>
                         </li>
         </ul>
@@ -143,7 +143,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 
                 <div class="card card-post mt-4 mb-2">
 
-                    <div class="card-body">
+                    <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
                     <img class="card-img img-fluid image-post" src="images/michelle.JPG" alt=""  style="height: 239px;">
                     <?php
 
@@ -167,7 +167,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="col-sm-12 col-lg-4">
                 
                 <div class="card card-post mt-4 mb-2">
-                    <div class="card-body">
+                    <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
                     <img class="card-img img-fluid image-post" src="images/amintiri.png" alt=""  style="height: 239px;">
                     <p class="card-text"><small class="text-muted">Exemplare disponibile:  </small></p> 
                     <br>
@@ -195,7 +195,7 @@ while ($row = mysqli_fetch_assoc($result)){?>
 
                 <div class="card card-post mt-4 mb-4">
 
-                    <div class="card-body">
+                    <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
 
                     <img class="card-img img-fluid image-post" src="images/ion.jpg" alt=""  style="height: 239px;">
                     
@@ -223,7 +223,7 @@ while ($row = mysqli_fetch_assoc($result)){ ?>
     
     <div class="card card-post mt-4 mb-2">
 
-        <div class="card-body">
+        <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
         <img class="card-img img-fluid image-post" src="images/morometii.JPG" alt=""  style="height: 239px;">
         <?php
 
@@ -249,7 +249,7 @@ while ($row = mysqli_fetch_assoc($result)){ ?>
 <div class="col-sm-12 col-lg-4">
     
     <div class="card card-post mt-4 mb-2">
-        <div class="card-body">
+        <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
         <img class="card-img img-fluid image-post" src="images/iarna.png" alt=""  style="height: 239px;">
 
         <?php
@@ -277,7 +277,7 @@ while ($row = mysqli_fetch_assoc($result)){ ?>
 
     <div class="card card-post mt-4 mb-4">
 
-        <div class="card-body">
+        <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
 
         <img class="card-img img-fluid image-post" src="images/barack.jpg" alt="" style="height: 239px;">
 

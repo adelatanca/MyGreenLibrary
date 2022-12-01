@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Submit" style="font-size: medium;">
-                <a class="btn btn-link" href="http://localhost:81/BibliotecaTancaAdela/indexUser.php" style="font-size: medium;">Cancel</a>
+                <a class="btn btn-link" href="http://localhost:8081/BibliotecaTancaAdela/indexUser.php" style="font-size: medium;">Cancel</a>
             </div>
         </form>
         </div>

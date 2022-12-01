@@ -3,7 +3,7 @@
 require_once ("dbImprumut.php");
 require_once ("component.php");
 
-$con = CreatedbImpr();
+$conImpr = CreatedbImpr();
 
 
 if(isset($_POST['create'])){
@@ -39,10 +39,10 @@ function createDataImprumut(){
         $sql = "INSERT INTO imprumutul (data_imprumut, data_returnare, data_returnarii, status_cartea_nr_carte, cititorul_id_cititor ) 
                         VALUES ('$data_imprumut','$data_returnare',null, '$status_cartea_nr_carte', '$cititorul_id_cititor')";
 
-        if(mysqli_query($GLOBALS['con'], $sql)){
+        if(mysqli_query($GLOBALS['conImpr'], $sql)){
             TextNode("success", "Record Successfully Inserted...!");
         }else{
-            echo "Error la imprumut";
+            echo "Error la imprumut $sql";
         }
 
     }else{
@@ -52,7 +52,7 @@ function createDataImprumut(){
 
 
 function textboxValue($value){
-    $textbox = mysqli_real_escape_string($GLOBALS['con'], trim($_POST[$value]));
+    $textbox = mysqli_real_escape_string($GLOBALS['conImpr'], trim($_POST[$value]));
     if(empty($textbox)){
         return false;
     }else{
@@ -77,7 +77,7 @@ function getData(){
     JOIN imprumutul 
       ON id_cititor = cititorul_id_cititor";
 
-    $result = mysqli_query($GLOBALS['con'], $sql);
+    $result = mysqli_query($GLOBALS['conImpr'], $sql);
 
     if(mysqli_num_rows($result) > 0){
         return $result;
@@ -98,7 +98,7 @@ function UpdateData(){
                     UPDATE imprumutul SET data_imprumut='$data_imprumut', data_returnare = '$data_returnare', data_returnarii = '$data_returnarii',  status_cartea_nr_carte='$status_cartea_nr_carte', cititorul_id_cititor='$cititorul_id_cititor'  WHERE data_imprumut='$data_imprumut';                    
         ";
 
-        if(mysqli_query($GLOBALS['con'], $sql)){
+        if(mysqli_query($GLOBALS['conImpr'], $sql)){
             TextNode("success", "Data Successfully Updated");
         }else{
             TextNode("error", "Enable to Update Data");
@@ -115,7 +115,7 @@ function deleteRecord(){
 
     $sql = "DELETE FROM imprumutul WHERE status_cartea_nr_carte=$status_cartea_nr_carte";
 
-    if(mysqli_query($GLOBALS['con'], $sql)){
+    if(mysqli_query($GLOBALS['conImpr'], $sql)){
         TextNode("success","Record Deleted Successfully...!");
     }else{
         TextNode("error","Enable to Delete Record...!");
@@ -141,7 +141,7 @@ function deleteBtn(){
 function deleteAll(){
     $sql = "DROP TABLE imprumutul";
 
-    if(mysqli_query($GLOBALS['con'], $sql)){
+    if(mysqli_query($GLOBALS['conImpr'], $sql)){
         TextNode("success","All Record deleted Successfully...!");
         CreatedbImpr();
     }else{
@@ -159,7 +159,7 @@ function getNrExemplareDisponibile($isbn)
     ON sc.cartea_isbn = c.isbn 
     WHERE  disponibilitate = 1 AND isbn=$isbn
     GROUP  BY titlu; ";
-    $result = mysqli_query($GLOBALS['con'], $sql);
+    $result = mysqli_query($GLOBALS['conImpr'], $sql);
 
     if(mysqli_num_rows($result) > 0){
         return $result;
@@ -180,7 +180,7 @@ function getSelectNume()
    JOIN imprumutul 
      ON id_cititor = cititorul_id_cititor
      WHERE nume_cititor='$numecititor'";
-   $result = mysqli_query($GLOBALS['con'], $sql);
+   $result = mysqli_query($GLOBALS['conImpr'], $sql);
 
     if(mysqli_num_rows($result) > 0){
         return $result;

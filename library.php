@@ -53,28 +53,28 @@ require_once ("../BibliotecaTancaAdela/php/operationCarte.php");
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/library.php">Acasa </i></a>
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/library.php">Acasa </i></a>
           </li>
      
 
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/login.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/login.php">
               Login
             </a>
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/register.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/register.php">
               User Sign-up
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/reset_password.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/reset_password.php">
               Reseteaza parola
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost:81/BibliotecaTancaAdela/logout.php">
+            <a class="nav-link" href="http://localhost:8081/BibliotecaTancaAdela/logout.php">
               Logout
             </a>
           </li>
@@ -136,7 +136,7 @@ require_once ("../BibliotecaTancaAdela/php/operationCarte.php");
                 
                 <div class="card card-post mt-4 mb-2">
 
-                    <div class="card-body">
+                    <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
                     <img class="card-img img-fluid image-post" src="images/michelle.JPG" alt=""  style="height: 239px;">
                     <?php
 
@@ -168,7 +168,7 @@ else
             <div class="col-sm-12 col-lg-4">
                 
                 <div class="card card-post mt-4 mb-2">
-                    <div class="card-body">
+                    <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
                     <img class="card-img img-fluid image-post" src="images/amintiri.png" alt=""  style="height: 239px;">
            
                     <?php
@@ -201,7 +201,7 @@ else
 
                 <div class="card card-post mt-4 mb-4">
 
-                    <div class="card-body">
+                    <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
 
                     <img class="card-img img-fluid image-post" src="images/ion.jpg" alt=""  style="height: 239px;">
                     
@@ -237,7 +237,7 @@ else
     
     <div class="card card-post mt-4 mb-2">
 
-        <div class="card-body">
+        <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
         <img class="card-img img-fluid image-post" src="images/morometii.JPG" alt=""  style="height: 239px;">
         <?php
 
@@ -272,7 +272,7 @@ else
 <div class="col-sm-12 col-lg-4">
     
     <div class="card card-post mt-4 mb-2">
-        <div class="card-body">
+        <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
         <img class="card-img img-fluid image-post" src="images/iarna.png" alt=""  style="height: 239px;">
 
         <?php
@@ -308,7 +308,7 @@ else
 
     <div class="card card-post mt-4 mb-4">
 
-        <div class="card-body">
+        <div class="card-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding:2.25rem">
 
         <img class="card-img img-fluid image-post" src="images/barack.jpg" alt="" style="height: 239px;">
 
@@ -498,7 +498,7 @@ else
               <br />
               <li>
                 <i class="fas fa-rss"></i>
-                <a href="#!">Astăzi, 9 septembrie 2020, a avut loc deschiderea unei filiale a Bibliotecii "My Green
+                <a href="#!">Astăzi, 9 septembrie 2022, a avut loc deschiderea unei filiale a Bibliotecii "My Green
                   Library" Bihor, destinată publicului din Episcopia Bihor.</a>
               </li>
               <br />
@@ -559,7 +559,7 @@ else
     <div class="footer-copyright">
       <div class="container">
         <div class="row">
-          <p class="mx-auto p-3 mt-2">&copy; My Green Library 2020 </p>
+          <p class="mx-auto p-3 mt-2">&copy; My Green Library 2022 </p>
         </div>
       </div>
     </div>
