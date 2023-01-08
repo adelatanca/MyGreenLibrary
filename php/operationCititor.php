@@ -128,6 +128,28 @@ function UpdateDataCititor(){
     $nr_telefon=textboxValueCititor("nr_telefon");
     $email=textboxValueCititor("email");
 
+    $updateCititor = "CREATE FUNCTION updateCititor (id_cititor IN INTEGER, nume_cititor IN varchar(20), prenume_cititor IN varchar(20), nr_telefon IN varchar(20), email IN varchar(20))
+    RETURN VARCHAR2
+    AS
+       cursor c is
+          SELECT *
+          FROM Cititor
+          WHERE id_cititor = id_cititor;
+       rec c%rowtype;
+    BEGIN
+       open c;
+       fetch c into rec;
+       IF c%notfound THEN
+          RETURN 'Cititor does not exist';
+       END IF;
+       
+       UPDATE Cititor
+       SET nume_cititor = nume_cititor, prenume_cititor = prenume_cititor, nr_telefon = nr_telefon, email = email
+       WHERE id_cititor = id_cititor;
+       
+       RETURN 'Updated';
+    END;"
+
     if($id_cititor && $nume_cititor && $prenume_cititor  && $nr_telefon && $email ){
         $sql = "
                     UPDATE cititorul SET id_cititor='$id_cititor', nume_cititor = '$nume_cititor', prenume_cititor = '$prenume_cititor',  nr_telefon='$nr_telefon', email='$email'  WHERE id_cititor='$id_cititor';                    
@@ -148,6 +170,18 @@ function UpdateDataCititor(){
 
 function deleteRecordCititor(){
     $id_cititor = (int)textboxValueCititor("id_cititor");
+
+    $deleteCititor = "CREATE
+    OR
+    replace PROCEDURE deletecititor(id_cititor IN integer, p_status out varchar2) AS
+    BEGIN DELETE
+      FROM   cititorul
+      WHERE  id_cititor=$id_cititor dbms_output.put_line('Record Deleted Successfully...!');
+      EXCEPTION
+    WHEN no_data_found THEN
+      p_status := 'NO DATA FOUND.'; WHEN others THEN
+      p_status := 'Other Problems.';
+    END;";
 
     $sql = "DELETE FROM cititorul WHERE id_cititor=$id_cititor";
 

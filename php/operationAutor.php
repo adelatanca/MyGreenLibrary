@@ -98,6 +98,19 @@ function UpdateDataAutor(){
     $prenume_autor = textboxValueAutor("prenume_autor");   
     $gen=textboxValueAutor("gen");
 
+    $updateDataAutor = "CREATE
+    OR
+    replace FUNCTION updatedataautor(id_autor integer, nume_autor varchar(30), prenume_autor varchar(30), gen varchar(30))
+     RETURN varchar2
+    BEGIN UPDATE autorul
+      SET    id_autor='$id_autor',
+             nume_autor = '$nume_autor',
+             prenume_autor = '$prenume_autor',
+             gen='$gen'
+      WHERE  id_autor='$id_autor'
+      RETURN 'Updated';
+      END;
+     ";
 
     if($id_autor && $nume_autor && $prenume_autor  && $gen ){
         $sql = "
@@ -148,6 +161,14 @@ function deleteBtnAutor(){
 
 function deleteAllAutor(){
     $sql = "DROP TABLE autorul";
+
+    $dropAutorul = "CREATE OR REPLACE PROCEDURE dropAutorul(table_name IN VARCHAR2) AS
+      BEGIN
+        EXECUTE IMMEDIATE 'DROP TABLE ' || table_name;
+EXCEPTION
+   WHEN OTHERS THEN
+      DBMS_OUTPUT.put_line('Error dropping table: ' || SQLERRM);
+    END dropAutorul;"
 
     if(mysqli_query($GLOBALS['conAutor'], $sql)){
         TextNodeAutor("success","All Record deleted Successfully...!");

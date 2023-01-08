@@ -25,12 +25,46 @@ if(isset($_POST['deleteall'])){
 
 error_reporting(0);
 
+
+
 function createDataCartea(){
     $isbn = textboxValueCartea("isbn");
     $titlu = textboxValueCartea("titlu");
     $editura = textboxValueCartea("editura");   
     $nrex=textboxValueCartea("nr_exemplare");
     $categorie=textboxValueCartea("categorie");
+    // RETURN cartea%ROWTYPE 
+    // AS BEGIN INSERT INTO cartea(....)
+
+    $createDataCartea = "CREATE
+    OR
+    replace FUNCTION createdatacartea (isbn integer NOT NULL PRIMARY KEY, titlu varchar (20), editura varchar (50), nr_exemplare float, categorie varchar(50))
+    RETURN TABLE (isbn integer, titlu varchar (20), editura varchar (50), nr_exemplare float, categorie varchar(50))
+     AS 
+    BEGIN 
+        INSERT INTO cartea
+                  (
+                              isbn,
+                              titlu,
+                              editura,
+                              nr_exemplare,
+                              categorie
+                  )
+                  VALUES
+                  (
+                              '$isbn',
+                              '$titlu',
+                              '$editura',
+                              '$nrex',
+                              '$categorie'
+                  )RETURN
+      (
+             SELECT *
+             FROM   cartea
+      );
+      EXCEPTION
+    WHEN others THEN
+      raise_application_error(-20001,'An error was encountered - '||sqlcode||' -ERROR- '||sqlerrm);END";
 
     if($isbn && $titlu && $editura && $nrex &&  $categorie ){
 
@@ -65,6 +99,18 @@ function TextNodeCartea($classname, $msg){
 
 function getDataCartea(){
     $sql = "SELECT * FROM Cartea";
+
+    $selectFromCartea ="CREATE OR REPLACE PROCEDURE get_books AS
+    CURSOR c_books IS
+      SELECT * FROM Cartea;
+    BEGIN
+      FOR book_rec IN c_books LOOP
+        DBMS_OUTPUT.PUT_LINE('ISBN: ' || book_rec.isbn || ', Title: ' || book_rec.titlu);
+      END LOOP;
+    EXCEPTION
+      WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No books found!');
+    END;";
 
     $result = mysqli_query($GLOBALS['con'], $sql);
 
